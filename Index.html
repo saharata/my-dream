@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>เป้าหมายของฉัน</title>
+  <style>
+    body {
+      font-family: "Prompt", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      padding: 24px 16px 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 8px;
+      color: #f9fafb;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #9ca3af;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background: rgba(15,23,42,0.9);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+      border: 1px solid rgba(148,163,184,0.25);
+      backdrop-filter: blur(14px);
+    }
+
+    /* วิดีโอ */
+    .video-wrapper {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border: 1px solid rgba(148,163,184,0.4);
+    }
+
+    video, iframe {
+      width: 100%;
+      height: 280px;
+      display: block;
+      background: #020617;
+    }
+
+    /* เป้าหมาย 6 อย่าง */
+    .goals-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0 16px;
+      gap: 12px;
+    }
+
+    .goals-header h2 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .progress-text {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: #020617;
+      overflow: hidden;
+      margin-bottom: 10px;
+      border: 1px solid rgba(30,64,175,0.6);
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg,#38bdf8,#22c55e,#a855f7);
+      transition: width 0.25s ease-out;
+    }
+
+    .goals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .goal-item {
+      background: rgba(15,23,42,0.95);
+      border-radius: 14px;
+      padding: 10px 10px 8px;
+      border: 1px solid rgba(75,85,99,0.70);
+    }
+
+    .goal-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .goal-label {
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+
+    .goal-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.8rem;
+      color: #a3e635;
+    }
+
+    .goal-checkbox input {
+      accent-color: #22c55e;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 58px;
+      resize: vertical;
+      border-radius: 10px;
+      border: 1px solid #4b5563;
+      background: #020617;
+      color: #e5e7eb;
+      padding: 6px 8px;
+      font-size: 0.86rem;
+      box-sizing: border-box;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 1px #38bdf8;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    button {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-save {
+      background: linear-gradient(135deg,#22c55e,#16a34a);
+      color: #f9fafb;
+    }
+
+    .btn-reset {
+      background: #020617;
+      color: #9ca3af;
+      border: 1px solid #4b5563;
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 640px) {
+      video, iframe {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>เป้าหมายหกอย่างของฉัน</h1>
+    <p class="subtitle">พื้นที่เล็ก ๆ เอาไว้เก็บเป้าหมาย และกลับมาเตือนตัวเองในวันที่เหนื่อย 🌙</p>
+
+    <div class="card">
+      <!-- ส่วนวิดีโอ -->
+      <div class="video-wrapper">
+       
+
+        <iframe
+         src="https://www.youtube.com/embed/hwnS4TF2zHc"
+          title="Goal Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        -->
+      </div>
+
+      <!-- ส่วนเป้าหมาย 6 อย่าง -->
+      <div class="goals-header">
+        <h2>เป้าหมายของปีนี้</h2>
+        <div class="progress-text" id="progressText">0 / 6 บรรลุแล้ว</div>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="goals-grid" id="goalsGrid">
+        <!-- JS จะสร้างกล่องเป้าหมายให้ 6 กล่อง -->
+      </div>
+
+      <div class="buttons">
+        <button class="btn-reset" id="resetBtn">ล้างค่าเริ่มต้น</button>
+        <button class="btn-save" id="saveBtn">บันทึกเป้าหมาย</button>
+      </div>
+    </div>
+
+    <p class="footer-text">
+      ข้อมูลจะถูกเก็บไว้ในเบราว์เซอร์เครื่องของคุณเอง (localStorage) ✨
+    </p>
+  </div>
+
+  <script>
+    const DEFAULT_GOALS = [
+      "ดูแลสุขภาพให้ดีขึ้น (ออกกำลังกาย / นอนให้พอ)",
+      "พัฒนาทักษะการทำงาน หรือเรียนรู้อะไรใหม่ ๆ",
+      "เก็บเงิน / วางแผนการเงินอย่างมีสติ",
+      "ให้เวลากับครอบครัว หรือคนสำคัญมากขึ้น",
+      "ดูแลสภาพจิตใจตัวเอง หาที่พักใจที่ปลอดภัย",
+      "สร้างโปรเจกต์ส่วนตัว หรือความฝันที่อยากเริ่มมานาน"
+    ];
+
+    const goalsGrid = document.getElementById("goalsGrid");
+    const progressText = document.getElementById("progressText");
+    const progressFill = document.getElementById("progressFill");
+    const saveBtn = document.getElementById("saveBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    function loadData() {
+      const saved = JSON.parse(localStorage.getItem("myGoalsV1") || "null");
+      const goals = saved?.goals || DEFAULT_GOALS;
+      const done = saved?.done || Array(6).fill(false);
+      return { goals, done };
+    }
+
+    function renderGoals() {
+      const { goals, done } = loadData();
+      goalsGrid.innerHTML = "";
+
+      for (let i = 0; i < 6; i++) {
+        const item = document.createElement("div");
+        item.className = "goal-item";
+        item.innerHTML = `
+          <div class="goal-top">
+            <div class="goal-label">เป้าหมายที่ ${i + 1}</div>
+            <label class="goal-checkbox">
+              <input type="checkbox" data-idx="${i}" ${done[i] ? "checked" : ""}>
+              สำเร็จแล้ว
+            </label>
+          </div>
+          <textarea data-idx="${i}">${goals[i] || ""}</textarea>
+        `;
+        goalsGrid.appendChild(item);
+      }
+
+      updateProgress();
+      attachEvents();
+    }
+
+    function attachEvents() {
+      const checkboxes = goalsGrid.querySelectorAll("input[type='checkbox']");
+      checkboxes.forEach(cb => {
+        cb.addEventListener("change", updateProgress);
+      });
+    }
+
+    function updateProgress() {
+      const checkboxes = goalsGrid.querySelectorAll("input[type='checkbox']");
+      let count = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) count++;
+      });
+
+      progressText.textContent = `${count} / 6 บรรลุแล้ว`;
+      const percent = (count / 6) * 100;
+      progressFill.style.width = percent + "%";
+    }
+
+    function saveData() {
+      const textareas = goalsGrid.querySelectorAll("textarea");
+      const checkboxes = goalsGrid.querySelectorAll("input[type='checkbox']");
+
+      const goals = [];
+      const done = [];
+
+      textareas.forEach((ta, idx) => {
+        goals[idx] = ta.value.trim();
+      });
+
+      checkboxes.forEach((cb, idx) => {
+        done[idx] = cb.checked;
+      });
+
+      localStorage.setItem("myGoalsV1", JSON.stringify({ goals, done }));
+      alert("บันทึกเป้าหมายเรียบร้อยแล้ว 🤍");
+    }
+
+    function resetData() {
+      if (!confirm("ต้องการล้างข้อมูลและกลับไปใช้ตัวอย่างเริ่มต้นหรือไม่?")) return;
+      localStorage.removeItem("myGoalsV1");
+      renderGoals();
+    }
+
+    saveBtn.addEventListener("click", saveData);
+    resetBtn.addEventListener("click", resetData);
+<script type="module"
+      src="https://agent.d-id.com/v2/index.js"
+      data-mode="full"
+      data-client-key="Z29vZ2xlLW9hdXRoMnwxMTIwMDc0NTA2Njc3NTY5MjU3OTU6a0piRUloeE5ONFFXa1dhNFhRQUNv"
+      data-agent-id="v2_agt_hsVzB7V9"
+      data-name="did-agent"
+      data-monitor="true"
+      data-target-id="<PLACE_YOUR_DIV_ID_HERE>">
+</script>
+    // เริ่มต้น
+    renderGoals();
+  </script>
+</body>
+</html>
